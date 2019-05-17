@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.container {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.overview {
+    background: linear-gradient(to right, $color-4 0%, $color-4 50%, $color-4 50%, $color-5 50%, $color-5 100%);
+
+    .container {
+        display: flex;
+        height: 522px;
+        background-color: $color-5;
+
+        .grid {
+            display: flex;
+            flex-direction: column;
+            width: 650px;
+            padding-top: 11px;
+            padding-left: 47px;
+        }
+
+        .image-template {
+            width: 350px;
+            background-color: $color-6;
+        }
+
+        h3 {
+            margin-left: 2px;
+            padding-bottom: 11px;
+            font-size: 29px;
+        }
+
+        .underline {
+            margin-bottom: 31px;
+            margin-left: 1px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 19px;
+            font-weight: 300;
+            letter-spacing: .5px;
+            line-height: 30px;
+            text-decoration: underline $color-4;
+            word-spacing: -.4px;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .various-text-grid {
+            display: grid;
+            grid-column-gap: 40px;
+            grid-row-gap: 26px;
+            grid-template-columns: 254px 299px;
+            grid-template-rows: 70px;
+            line-height: 20px;
+
+            .various-text {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+
+                &.one {
+                    margin-top: 1px;
+                    line-height: 20px;
+                }
+
+                &.two {
+                    margin-top: 1px;
+                    line-height: 18.8px;
+                }
+
+                &.three {
+                    grid-column: span 2;
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+}

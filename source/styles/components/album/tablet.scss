@@ -1,0 +1,93 @@
+.container {
+    width: 592px;
+}
+
+.album {
+
+    .albumgrid {
+        display: flex;
+        display: grid;
+        grid-template-areas: 'h1'
+                            'singleimage'
+                            'rightside';
+        row-gap: 24.4px;
+        column-gap: 30px;
+
+        h1 {
+            grid-area: h1;
+            width: 591px;
+            margin: 0;
+        }
+
+        .singleimage {
+            grid-area: singleimage;
+            width: 591px;
+            height: 296px;
+        }
+
+        .rightside {
+            grid-area: rightside;
+            order: 3;
+            width: 591px;
+
+            .images {
+                display: grid;
+                grid-template-areas: 'poto1 poto2 poto3 poto4 poto5';
+                grid-template-columns: repeat(5, 107px);
+                width: 100%;
+                row-gap: 21px;
+                column-gap: 14px;
+
+                .color {
+                    background-color: $color-5;
+                }
+
+                .poto1 {
+                    grid-area: poto1;
+                }
+
+                .poto2 {
+                    grid-area: poto2;
+                }
+
+                .poto3 {
+                    grid-area: poto3;
+                }
+
+                .poto4 {
+                    grid-area: poto4;
+                }
+
+                .poto5 {
+                    grid-area: poto5;
+                }
+
+                .poto6 {
+                    display: none;
+                    grid-area: poto6;
+                }
+
+                .poto7 {
+                    display: none;
+                    grid-area: poto7;
+                }
+
+                .poto8 {
+                    display: none;
+                    grid-area: poto8;
+                }
+
+                .poto9 {
+                    display: none;
+                    grid-area: poto9;
+                }
+
+                div:hover {
+                    border: 7px solid $color-10;
+                    border-radius: 4px;
+                    box-shadow: inset 0 0 13px rgba(0, 0, 0, .7);
+                }
+            }
+        }
+    }
+}
