@@ -1,9 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .flex {
@@ -14,7 +12,6 @@ body {
 .container {
     display: flex;
     width: 1000px;
-    margin: 0 auto;
 }
 
 .album {
@@ -25,9 +22,8 @@ body {
 
     .albumgrid {
         display: grid;
-        grid-template-areas: 'singleimage h1'
-                             'singleimage rightside';
-        grid-template-rows: 35px 296px 102px;
+        grid-template-areas: 'singleimage h1' 'singleimage rightside';
+        grid-template-rows: 35px 398px;
         column-gap: 30px;
 
         h1 {
@@ -35,9 +31,11 @@ body {
             order: 2;
             width: 113px;
             margin: 0;
+            transform: translate(0, -4px);
             color: $color-9;
             font-family: 'Montserrat', sans-serif;
             font-size: 29px;
+            font-weight: bold;
         }
 
         .singleimage {
@@ -45,22 +43,20 @@ body {
             order: 1;
             width: 622px;
             height: 408.76px;
-            background-color: $color-5;
         }
 
         .rightside {
             grid-area: rightside;
             order: 3;
-            width: 372px;
+            width: 362px;
 
             .images {
                 display: grid;
-                grid-template-areas: 'poto1 poto2 poto3'
-                                     'poto4 poto5 poto6'
-                                     'poto7 poto8 poto9';
+                grid-template-areas: 'poto1 poto2 poto3' 'poto4 poto5 poto6' 'poto7 poto8 poto9';
                 grid-template-columns: 107.2px 107.2px 107.2px;
                 grid-template-rows: 101px 101px 101px;
-                width: 382px;
+                width: 362px;
+                margin-top: 28px;
                 row-gap: 21px;
                 column-gap: 15px;
 
@@ -68,40 +64,8 @@ body {
                     background-color: $color-5;
                 }
 
-                .poto1 {
-                    grid-area: poto1;
-                }
-
-                .poto2 {
-                    grid-area: poto2;
-                }
-
-                .poto3 {
-                    grid-area: poto3;
-                }
-
-                .poto4 {
-                    grid-area: poto4;
-                }
-
-                .poto5 {
-                    grid-area: poto5;
-                }
-
-                .poto6 {
-                    grid-area: poto6;
-                }
-
-                .poto7 {
-                    grid-area: poto7;
-                }
-
-                .poto8 {
-                    grid-area: poto8;
-                }
-
-                .poto9 {
-                    grid-area: poto9;
+                @for $i from 1 to 9 {
+                    .poto#{$i} { grid-area: poto + $i};
                 }
 
                 div:hover {

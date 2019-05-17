@@ -3,14 +3,15 @@
 }
 
 .album {
+    height: 574px;
 
     .albumgrid {
         display: flex;
         display: grid;
-        grid-template-areas: 'h1'
-                            'singleimage'
-                            'rightside';
+        grid-template-areas: 'h1' 'singleimage' 'rightside';
+        grid-template-rows: 35px 296px 105px;
         row-gap: 24.4px;
+        margin-top: -5px;
         column-gap: 30px;
 
         h1 {
@@ -23,18 +24,22 @@
             grid-area: singleimage;
             width: 591px;
             height: 296px;
+            margin-top: -7px;
         }
 
         .rightside {
             grid-area: rightside;
             order: 3;
             width: 591px;
+            margin-top: -7px;
 
             .images {
                 display: grid;
                 grid-template-areas: 'poto1 poto2 poto3 poto4 poto5';
                 grid-template-columns: repeat(5, 107px);
+                grid-template-rows: 101px;
                 width: 100%;
+                margin-top: 0;
                 row-gap: 21px;
                 column-gap: 14px;
 
@@ -60,26 +65,6 @@
 
                 .poto5 {
                     grid-area: poto5;
-                }
-
-                .poto6 {
-                    display: none;
-                    grid-area: poto6;
-                }
-
-                .poto7 {
-                    display: none;
-                    grid-area: poto7;
-                }
-
-                .poto8 {
-                    display: none;
-                    grid-area: poto8;
-                }
-
-                .poto9 {
-                    display: none;
-                    grid-area: poto9;
                 }
 
                 div:hover {

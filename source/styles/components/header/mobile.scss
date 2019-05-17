@@ -1,5 +1,103 @@
+.header {
+
+    .row1 {
+
+        .container {
+            width: 270px;
+            height: 425px;
+
+            .red {
+                width: 270px;
+                background-color: $color-1;
+
+                .logo {
+                    margin-bottom: 61px;
+
+                    &::before {
+                        margin-left: -7px;
+                        padding: 1px 7.5px;
+                        font-size: 24px;
+                    }
+
+                    p {
+                        top: 31px;
+                        margin-left: 6px;
+                        font-size: 14px;
+                    }
+                }
+
+                .category {
+                    margin-top: 3px;
+                }
+
+                .title {
+                    padding-bottom: 11px;
+                    border-bottom-color: $color-7;
+
+                    p {
+                        padding-right: 75px;
+                    }
+                }
+
+                .subtitle {
+                    padding-right: 10px;
+                    border-bottom-color: $color-7;
+                    font-size: 15px;
+                }
+
+                .arrowtext {
+
+                    p {
+                        margin-top: 2px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .icons {
+                width: 168px;
+
+                .linkgrid {
+                    width: 132px;
+
+                    a {
+
+                        &.location {
+                            border-right: 1px solid rgba(238, 238, 238, .3);
+                        }
+                    }
+                }
+            }
+
+            .menu {
+                position: absolute;
+                top: 14px;
+                right: 0;
+            }
+        }
+    }
+
+    .row2 {
+        background-color: $color-2;
+
+        .container {
+
+            &::before {
+                left: 0;
+            }
+
+            .arrows {
+
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .overview {
-    background-color: $color-5;
+    background: $color-5;
 
     .container {
         width: 270px;

@@ -1,59 +1,9 @@
-.header {
-
-    .container {
-        width: 690px;
-
-        .red {
-            width: 345px;
-            background-color: $color-1;
-
-            .logo {
-
-                &::before {
-                    padding: 1px 10px;
-                }
-
-                .p {
-                    margin-left: 7px;
-                }
-            }
-
-            .category {
-                padding: 3px 10px 6px 11px;
-            }
-
-            .title {
-                margin-bottom: 16px;
-                border-bottom-color: $color-7;
-            }
-
-            .subtitle {
-                margin-left: 3px;
-                border-bottom-color: $color-7;
-            }
-        }
-
-        .icons {
-            width: 312px;
-        }
-    }
-
-    .row2 {
-
-        .container {
-
-            &::before {
-                left: 0;
-            }
-        }
-    }
-}
-
 .overview {
-    background: $color-5;
+    background: linear-gradient(to right, $color-5 0%, $color-5 50%, $color-5 50%, $color-5 50%, $color-5 100%);
 
     .container {
         width: 690px;
+        height: 470px;
 
         .grid {
             padding-left: 49px;
@@ -63,6 +13,7 @@
                 grid-row-gap: 40px;
 
                 .various-text.three {
+                    margin-top: -1px;
                     padding-right: 0;
                 }
             }

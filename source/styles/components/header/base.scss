@@ -1,12 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .flex {
     display: flex;
     justify-items: flex-start;
@@ -19,11 +10,24 @@ body {
 }
 
 .header {
+    position: relative;
+
+    .imagecontainter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     .row1 {
         display: flex;
+        position: relative;
         overflow: hidden;
-        background: $color-3;
         color: $color-5;
         font-weight: bold;
 
@@ -36,12 +40,12 @@ body {
             flex-direction: column;
             width: 350px;
             padding: 16px 33px;
-            background-color: $color-1;
+            background-color: rgba($color-1, .7);
             font-size: 22px;
 
             .logo {
                 margin-bottom: 50px;
-                padding-top: 14px;
+                padding-top: 17px;
 
                 &::before {
                     content: 'E';
@@ -54,8 +58,8 @@ body {
                 p {
                     display: inline-block;
                     position: absolute;
-                    top: 12px;
-                    margin-left: 8px;
+                    top: 31px;
+                    margin-left: 9px;
                     font-size: 17px;
                     letter-spacing: .3px;
                     cursor: pointer;
@@ -65,24 +69,27 @@ body {
             .category {
                 display: inline-block;
                 width: 100px;
+                margin-top: 4px;
                 margin-left: 1px;
-                padding: 4px 10px 5px 9px;
+                padding: 5px 10px 6px 9px;
                 background-color: $color-2;
                 font-size: 9px;
+                font-weight: lighter;
                 letter-spacing: .6px;
             }
 
             .title {
                 display: inline-block;
-                margin-top: 4px;
+                margin-top: 7px;
                 margin-bottom: 17px;
                 margin-left: 4px;
-                padding-bottom: 12px;
+                padding-bottom: 9px;
                 border-bottom: .5px $color-8 solid;
                 letter-spacing: -.6px;
 
                 p {
                     margin: 0;
+                    margin-bottom: 5px;
                     padding-right: 100px;
                 }
 
@@ -117,7 +124,7 @@ body {
                     width: 21px;
                     height: 21px;
                     margin-right: 4px;
-                    background-image: url(/images/header/Shape_12.png);
+                    background-image: url(/images/header/shape_12.png);
                 }
 
                 p {
@@ -125,7 +132,7 @@ body {
                     position: absolute;
                     left: 63px;
                     margin: 0;
-                    margin-top: -1px;
+                    margin-top: 3px;
                 }
             }
 
@@ -138,7 +145,7 @@ body {
 
                 .linkgrid {
                     display: flex;
-                    width: 130px;
+                    width: 132px;
                     margin-right: -1px;
 
                     a {
@@ -150,31 +157,30 @@ body {
                         &.eye {
                             border-top: 1px solid rgba(238, 238, 238, .3);
                             border-left: 1px solid rgba(238, 238, 238, .3);
-                            background-image: url(/images/header/Eye.png);
+                            background-image: url(/images/header/eye.png);
 
                             &:hover {
-                                background-image: url(/images/header/Eye_copy.png)
+                                background-image: url(/images/header/eye_copy.png);
                             }
                         }
 
                         &.image {
                             border-top: 1px solid rgba(238, 238, 238, .3);
                             border-left: 1px solid rgba(238, 238, 238, .3);
-                            background-image: url(/images/header/Image.png);
+                            background-image: url(/images/header/image.png);
 
                             &:hover {
-                                background-image: url(/images/header/Image_copy.png)
+                                background-image: url(/images/header/image_copy.png);
                             }
                         }
 
                         &.location {
                             border-top: 1px solid rgba(238, 238, 238, .3);
-                            border-right: 1px solid rgba(238, 238, 238, .3);
                             border-left: 1px solid rgba(238, 238, 238, .3);
-                            background-image: url(/images/header/Marker.png);
+                            background-image: url(/images/header/marker.png);
 
                             &:hover {
-                                background-image: url(/images/header/Marker_copy.png)
+                                background-image: url(/images/header/marker_copy.png);
                             }
                         }
                     }
@@ -186,7 +192,7 @@ body {
             width: 63px;
             height: 58px;
             background-color: $color-2;
-            background-image: url(/images/header/Icon_copy.png);
+            background-image: url(/images/header/icon_copy.png);
             background-repeat: no-repeat;
             background-position: center;
 
@@ -200,6 +206,7 @@ body {
 
     .row2 {
         display: flex;
+        position: relative;
         overflow: hidden;
         background-color: $color-4;
 
@@ -223,7 +230,6 @@ body {
             .arrows {
                 display: flex;
                 position: relative;
-                z-index: 1;
                 justify-items: right;
                 align-items: center;
 
@@ -236,12 +242,12 @@ body {
                         width: 57px;
                         height: 100%;
                         border-left: 1px solid rgba(238, 238, 238, .3);
-                        background-image: url(/images/header/Left.png);
+                        background-image: url(/images/header/left.png);
                         background-repeat: no-repeat;
                         background-position: center;
 
                         &:hover {
-                            background-image: url(/images/header/Left_red.png);
+                            background-image: url(/images/header/left_red.png);
                         }
                     }
 
@@ -250,12 +256,12 @@ body {
                         height: 100%;
                         border-right: 1px solid rgba(238, 238, 238, .3);
                         border-left: 1px solid rgba(238, 238, 238, .3);
-                        background-image: url(/images/header/Right.png);
+                        background-image: url(/images/header/right.png);
                         background-repeat: no-repeat;
                         background-position: center;
 
                         &:hover {
-                            background-image: url(/images/header/Right_red.png);
+                            background-image: url(/images/header/right_red.png);
                         }
                     }
                 }

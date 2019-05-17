@@ -18,6 +18,8 @@
             grid-area: h1;
             width: 270px;
             margin: 0;
+            margin-top: -11px;
+            font-size: 23px;
             text-align: center;
         }
 
@@ -25,6 +27,7 @@
             grid-area: singleimage;
             width: 271px;
             height: 191px;
+            margin-top: -11px;
         }
 
         .rightside {
@@ -38,6 +41,7 @@
                 grid-template-areas: 'poto1 poto2 poto3 poto4 poto5';
                 grid-template-columns: repeat(5, 107px);
                 width: 100%;
+                margin-top: 0;
                 row-gap: 21px;
                 column-gap: 14px;
 
